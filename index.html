@@ -374,12 +374,179 @@
 
         </nav>
         </div>
-
+        <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-9">
+                    <h2>Información General de Pozos</h2>
+                    <ol class="breadcrumb">
+                        <li class="active">
+                            <strong>Región: Nacional</strong>
+                        </li>
+                    </ol>
+                </div>
+            </div>
 
         <div class="wrapper wrapper-content">
             <div class="col-lg-12">
-                <div class="col-lg-6">
-                    <div id="world-map" style="height: 600px;"></div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div id="world-map" style="height: 600px;"></div>
+                    </div>
+                    <div class="col-lg-6">
+                        <!-- <div class="row">
+                            <div class="col-lg-12">
+                                <div class="ibox float-e-margins">
+                                        <div class="ibox-title">
+                                            <span class="label label-primary pull-right">Today</span>
+                                            <h5>Región Seleccionada: Nivel Nacional</h5>
+                                        </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="ibox float-e-margins">
+                                    <div class="ibox-title">
+                                        <span class="label label-primary pull-right">Ahora Mismo</span>
+                                        <h5>Estado de Pozos</h5>
+                                    </div>
+                                    <div class="ibox-content">
+                                        <!-- <h1 class="no-margins">1200</h1>
+                                        <div class="stat-percent font-bold text-navy">100% <i class="fa fa-level-up"></i></div>
+                                        <small>New orders</small> -->
+                                        <div>
+                                            <span>Producción</span>
+                                            <small class="pull-right">1000/1200 Pozos</small>
+                                        </div>
+                                        <div class="progress progress-small">
+                                            <div style="width: 60%;" class="progress-bar"></div>
+                                        </div>
+                                        <div>
+                                            <span>Abiertos</span>
+                                            <small class="pull-right">10/1200 Pozos</small>
+                                        </div>
+                                        <div class="progress progress-small">
+                                            <div style="width: 10%;" class="progress-bar progress-bar-warning"></div>
+                                        </div>
+                                        <div>
+                                            <span>Parados</span>
+                                            <small class="pull-right">10/1200 Pozos</small>
+                                        </div>
+                                        <div class="progress progress-small">
+                                            <div style="width: 10%;" class="progress-bar progress-bar-danger"></div>
+                                        </div>
+                                        <div>
+                                            <span>Clausurados</span>
+                                            <small class="pull-right">10/1200 Pozos</small>
+                                        </div>
+                                        <div class="progress progress-small">
+                                            <div style="width: 10%;" class="progress-bar progress-bar-info"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="ibox float-e-margins">
+                                    <div class="ibox-title">
+                                        <span class="label label-danger pull-right">Hoy</span>
+                                        <h5>Emergencias</h5>
+                                    </div>
+                                    <div class="ibox-content">
+                                        <div class="m-c-md inline">
+                                            <input type="text" value="12" class="dial m-r-lg" data-fgColor="#ED5565" data-width="200" data-height="190" data-angleOffset=-125 data-angleArc=250 />
+                                        </div>
+                                        <!-- <div class="row text-center">
+                                        <button class="btn btn-sm btn-primary pull-right m-c-md"><strong>Ver Emergencias</strong></button>
+                                        </div> -->
+                                        <!-- <h1 class="no-margins">60 420,600</h1> -->
+                                        <div class="stat-percent font-bold text-warning">10% <i class="fa fa-level-up"></i></div>
+                                        <small>Actualización: 20/10/2016 </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="ibox float-e-margins">
+                                    <div class="ibox-title">
+                                        <span class="label label-warning pull-right">Hoy</span>
+                                        <h5>Lista de Emergencias</h5>
+                                    </div>
+                                    <div class="ibox-content">
+                                        <div class="scroll_content">
+                                            <div class="table-responsive">
+                            <table class="table table-hover issue-tracker">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="label label-warning">Andina</span>
+                                    </td>
+                                    <td class="issue-info">
+                                        <a href="#">
+                                            INCENDIO
+                                        </a>
+
+                                        <small>
+                                            This is issue with the coresponding note
+                                        </small>
+                                    </td>
+                                    <td>
+                                        Pozo 1
+                                    </td>
+                                    <td>
+                                        12.02.2015 10:00 am
+                                    </td>
+                                    <td>
+                                        <span class="pie">0.52,1.041</span>
+                                        2d
+                                    </td>
+                                    <td class="text-right">
+                                        <button class="btn btn-white btn-xs"> Tag</button>
+                                        <button class="btn btn-white btn-xs"> Mag</button>
+                                        <button class="btn btn-white btn-xs"> Rag</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="label label-primary">Caribe</span>
+                                    </td>
+                                    <td class="issue-info">
+                                        <a href="#">
+                                            ELÉCTRICA
+                                        </a>
+
+                                        <small>
+                                            This is issue with the coresponding note
+                                        </small>
+                                    </td>
+                                    <td>
+                                        Pozo 6
+                                    </td>
+                                    <td>
+                                        12.02.2015 10:00 am
+                                    </td>
+                                    <td>
+                                        <span class="pie">0.52,1.041</span>
+                                        2d
+                                    </td>
+                                    <td class="text-right">
+                                        <button class="btn btn-white btn-xs"> Tag</button>
+                                        <button class="btn btn-white btn-xs"> Mag</button>
+                                        <button class="btn btn-white btn-xs"> Rag</button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                                </table>
+                                </div>
+                            
+                                            <!-- <h1 class="no-margins">$ 120 430,800</h1> -->
+                                            <!-- <div class="stat-percent font-bold text-warning">16% <i class="fa fa-level-up"></i></div> -->
+                                            <!-- <small>New orders</small> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div> 
         </div>
@@ -852,10 +1019,18 @@
     <!-- ChartJS-->
     <script src="js/plugins/chartJs/Chart.min.js"></script>
 
+    <script src="js/plugins/jsKnob/jquery.knob.js"></script>
+
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
     <script>
         $(document).ready(function() {
 
-            
+            $('.scroll_content').slimscroll({
+                height: '200px'
+            })
+            $(".dial").knob();
+
             var mapData = {
                 "CO-RAN": 1135,
                 "CO-RCA": 200,
