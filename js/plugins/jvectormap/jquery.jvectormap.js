@@ -1104,6 +1104,10 @@ jvm.$ = jQuery, Array.prototype.indexOf || (Array.prototype.indexOf = function(s
                     stringP = string2[0].concat(": ",reg[code]);
                     console.log(stringP);
                     var stringP = $('#title-h').text(stringP);
+                    
+                    var estadoPozosAntes = $('#estadoPozos').text();
+                    estadoPozosAntes = estadoPozosAntes.split(":")[0];
+                    $('#estadoPozos').text(estadoPozosAntes);
                 }
                 
     }), this.spinner = jvm.$("<div/>").addClass("jvectormap-spinner").appendTo(this.params.container), this.spinner.hide()

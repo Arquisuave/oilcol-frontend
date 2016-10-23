@@ -59,7 +59,7 @@
             console.log("CODIGO REGION "+code);
             var path = 'js/plugins/jvectormap/col-compl.js';
             console.log(path);
-                var reg = {'CO-RCA':"Caribe", 'CO-RAN':"Andina", 'CO-RAM':"Amazonía", 'CO-RPA':"Pacifico", 'CO-ROR':"Orinoquía"};
+                var reg = {'CO-RCA':"Caribe", 'CO-RAN':"Andina", 'CO-RAM':"Amazonía", 'CO-RPA':"Pacifico", 'CO-ROR':"Orinoquía", 'CO-COMPL':"Nacional"};
                 var stringP = $('#title-h').text();
                 console.log(stringP);
                 string2 = stringP.split(":");
@@ -72,8 +72,12 @@
                 else
                 {
                     stringP = string2[0].concat(": ",reg[code]);
-                    console.log(stringP);
+                    //console.log(stringP);
                     var stringP = $('#title-h').text(stringP);
+                    
+                    var estadoPozosAntes = $('#estadoPozos').text();
+                    estadoPozosAntes = estadoPozosAntes.split(":")[0];
+                    $('#estadoPozos').text(estadoPozosAntes+": "+reg[code]);
                 }
                 
                 
