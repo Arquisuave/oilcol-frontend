@@ -55,10 +55,28 @@
             },
             mapUrlByCode: function(code, multiMap){
             // var id = code.toLowerCase()+'_merc';
-            // console.log("Code: "+id);
             // return id;
+            console.log("CODIGO REGION "+code);
             var path = 'js/plugins/jvectormap/col-compl.js';
             console.log(path);
+                var reg = {'CO-RCA':"Caribe", 'CO-RAN':"Andina", 'CO-RAM':"Amazonía", 'CO-RPA':"Pacifico", 'CO-ROR':"Orinoquía"};
+                var stringP = $('#title-h').text();
+                console.log(stringP);
+                string2 = stringP.split(":");
+                console.log(string2[0]);
+                
+                if(reg[code]== undefined)
+                {
+                        //no hace nada
+                }
+                else
+                {
+                    stringP = string2[0].concat(": ",reg[code]);
+                    console.log(stringP);
+                    var stringP = $('#title-h').text(stringP);
+                }
+                
+                
             return path;
             }
             });
