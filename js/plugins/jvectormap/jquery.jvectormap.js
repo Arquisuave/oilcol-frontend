@@ -1114,9 +1114,26 @@ jvm.$ = jQuery, Array.prototype.indexOf || (Array.prototype.indexOf = function(s
                             estadoPozosAntes = estadoPozosAntes+":"+reg[code]
                         }
                     $('#estadoPozos').text(estadoPozosAntes);
-                    //TITULO PORCENTAJE EMERGENCIAS
                     
-                    //TITULO LISTA EMERGENCIAS emergenciasPerc lista emergen
+                    
+                    //TITULO PORCENTAJE EMERGENCIAS emergenciasPerc
+                    var estadoPercEmerg = $('#emergenciasPerc').text();
+                    estadoPercEmerg = estadoPozosAntes.split(":")[0];
+                    if(!reg[code].equals(Nacional))
+                        {
+                            estadoPercEmerg = estadoPercEmerg+":"+reg[code]
+                        }
+                    $('#emergenciasPerc').text(estadoPercEmerg);
+                    
+                    
+                    //TITULO LISTA EMERGENCIAS  listaEmergen
+                    var estadoPozosAntes = $('#listaEmergen').text();
+                    estadoListaEmer = estadoListaEmer.split(":")[0];
+                    if(!reg[code].equals(Nacional))
+                        {
+                            estadoListaEmer = estadoListaEmer+":"+reg[code]
+                        }
+                    $('#listaEmergen').text(estadoListaEmer);
                 }
                 
     }), this.spinner = jvm.$("<div/>").addClass("jvectormap-spinner").appendTo(this.params.container), this.spinner.hide()
