@@ -1088,7 +1088,7 @@ jvm.$ = jQuery, Array.prototype.indexOf || (Array.prototype.indexOf = function(s
         var code = that.history[numArray-1].params.map;
         var codeA = code.split("_");
         code = codeA[0].toUpperCase();
-       console.log("QUIERO ESTO HIJUEPUTA "+code);
+       console.log("QUIERO ESTO  "+code);
         var reg = {'CO-RCA':"Caribe", 'CO-RAN':"Andina", 'CO-RAM':"Amazonía", 'CO-RPA':"Pacifico", 'CO-ROR':"Orinoquía", 'CO-COMPL':"Nacional"};
         var stringP = $('#title-h').text();
                 //console.log(stringP);
