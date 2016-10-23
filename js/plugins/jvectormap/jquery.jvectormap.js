@@ -1090,9 +1090,7 @@ jvm.$ = jQuery, Array.prototype.indexOf || (Array.prototype.indexOf = function(s
         code = codeA[0].toUpperCase();
        console.log("QUIERO ESTO  "+code);
         var reg = {'CO-RCA':"Caribe", 'CO-RAN':"Andina", 'CO-RAM':"Amazonía", 'CO-RPA':"Pacifico", 'CO-ROR':"Orinoquía", 'CO-COMPL':"Nacional"};
-        var stringP = $('#title-h').text();
-                //console.log(stringP);
-        string2 = stringP.split(":");
+       
                 //console.log(string2[0]);
                 
                 if(reg[code]== undefined)
@@ -1102,37 +1100,28 @@ jvm.$ = jQuery, Array.prototype.indexOf || (Array.prototype.indexOf = function(s
                 else
                 {
                     //TITULO GRANDE
+                     var stringP = $('#title-h').text();
+                        //console.log(stringP);
+                    string2 = stringP.split(":");
                     stringP = string2[0].concat(": ",reg[code]);
                     console.log(stringP);
                     var stringP = $('#title-h').text(stringP);
                     
                     //TITULO POZOS
                     var estadoPozosAntes = $('#estadoPozos').text();
-                    estadoPozosAntes = estadoPozosAntes.split(":")[0];
-                    if(!reg[code].equals(Nacional))
-                        {
-                            estadoPozosAntes = estadoPozosAntes+":"+reg[code]
-                        }
+                    estadoPozosAntes = estadoPozosAntes.split(":")[0].concat(": ",reg[code]);
                     $('#estadoPozos').text(estadoPozosAntes);
                     
                     
                     //TITULO PORCENTAJE EMERGENCIAS emergenciasPerc
                     var estadoPercEmerg = $('#emergenciasPerc').text();
-                    estadoPercEmerg = estadoPozosAntes.split(":")[0];
-                    if(!reg[code].equals(Nacional))
-                        {
-                            estadoPercEmerg = estadoPercEmerg+":"+reg[code]
-                        }
+                    estadoPercEmerg = estadoPercEmerg.split(":")[0].concat(": ",reg[code]);
                     $('#emergenciasPerc').text(estadoPercEmerg);
                     
                     
                     //TITULO LISTA EMERGENCIAS  listaEmergen
-                    var estadoPozosAntes = $('#listaEmergen').text();
-                    estadoListaEmer = estadoListaEmer.split(":")[0];
-                    if(!reg[code].equals(Nacional))
-                        {
-                            estadoListaEmer = estadoListaEmer+":"+reg[code]
-                        }
+                    var estadoListaEmer = $('#listaEmergen').text();
+                    estadoListaEmer = estadoListaEmer.split(":")[0].concat(": ",reg[code]);
                     $('#listaEmergen').text(estadoListaEmer);
                 }
                 

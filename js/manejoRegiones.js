@@ -56,14 +56,14 @@
             mapUrlByCode: function(code, multiMap){
             // var id = code.toLowerCase()+'_merc';
             // return id;
-            console.log("CODIGO REGION "+code);
+           // console.log("CODIGO REGION "+code);
             var path = 'js/plugins/jvectormap/col-compl.js';
-            console.log(path);
+            //console.log(path);
                 var reg = {'CO-RCA':"Caribe", 'CO-RAN':"Andina", 'CO-RAM':"Amazonía", 'CO-RPA':"Pacifico", 'CO-ROR':"Orinoquía", 'CO-COMPL':"Nacional"};
                 var stringP = $('#title-h').text();
-                console.log(stringP);
+               // console.log(stringP);
                 string2 = stringP.split(":");
-                console.log(string2[0]);
+                //console.log(string2[0]);
                 
                 if(reg[code]== undefined)
                 {
@@ -78,6 +78,15 @@
                     var estadoPozosAntes = $('#estadoPozos').text();
                     estadoPozosAntes = estadoPozosAntes.split(":")[0];
                     $('#estadoPozos').text(estadoPozosAntes+": "+reg[code]);
+                    
+                    var estadoEmergenciasPerc =  $('#emergenciasPerc').text();
+                    estadoEmergenciasPerc = estadoEmergenciasPerc.split(":")[0];
+                    $('#emergenciasPerc').text(estadoEmergenciasPerc+": "+reg[code]);
+                    
+                    var estadoListaEmergen = $('#listaEmergen').text();
+                    estadoListaEmergen= estadoListaEmergen.split(":")[0];
+                   $('#listaEmergen').text(estadoListaEmergen+": "+reg[code]);
+                    
                 }
                 
                 
