@@ -1078,8 +1078,34 @@ jvm.$ = jQuery, Array.prototype.indexOf || (Array.prototype.indexOf = function(s
     var that = this;
     this.maps = {}, this.params = jvm.$.extend(!0, {}, jvm.MultiMap.defaultParams, params), this.params.maxLevel = this.params.maxLevel || Number.MAX_VALUE, this.params.main = this.params.main || {}, this.params.main.multiMapLevel = 0, this.history = [this.addMap(this.params.main.map, this.params.main)], this.defaultProjection = this.history[0].mapData.projection.type, this.mapsLoaded = {}, this.params.container.css({
         position: "relative"
-    }), this.backButton = jvm.$("<div/>").addClass("jvectormap-goback").text("Back").appendTo(this.params.container), this.backButton.hide(), this.backButton.click(function() {
-        that.goBack()
+    }), this.backButton = jvm.$("<div/>").addClass("jvectormap-goback").text("Back").appendTo(this.params.container), this.backButton.hide(), this.backButton.click(function() 
+    {
+        that.goBack();
+        console.log(that);
+        console.log(that.history);
+        var numArray = that.history.length;
+        //console.log(algo);
+        var code = that.history[numArray-1].params.map;
+        var codeA = code.split("_");
+        code = codeA[0].toUpperCase();
+       console.log("QUIERO ESTO HIJUEPUTA "+code);
+        var reg = {'CO-RCA':"Caribe", 'CO-RAN':"Andina", 'CO-RAM':"Amazonía", 'CO-RPA':"Pacifico", 'CO-ROR':"Orinoquía", 'CO-COMPL':"Nacional"};
+        var stringP = $('#title-h').text();
+                //console.log(stringP);
+        string2 = stringP.split(":");
+                //console.log(string2[0]);
+                
+                if(reg[code]== undefined)
+                {
+                        //no hace nada
+                }
+                else
+                {
+                    stringP = string2[0].concat(": ",reg[code]);
+                    console.log(stringP);
+                    var stringP = $('#title-h').text(stringP);
+                }
+                
     }), this.spinner = jvm.$("<div/>").addClass("jvectormap-spinner").appendTo(this.params.container), this.spinner.hide()
 }, jvm.MultiMap.prototype = {
     addMap: function(name, config) {
