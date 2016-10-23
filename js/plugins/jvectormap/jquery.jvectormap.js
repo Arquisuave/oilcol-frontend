@@ -1101,13 +1101,22 @@ jvm.$ = jQuery, Array.prototype.indexOf || (Array.prototype.indexOf = function(s
                 }
                 else
                 {
+                    //TITULO GRANDE
                     stringP = string2[0].concat(": ",reg[code]);
                     console.log(stringP);
                     var stringP = $('#title-h').text(stringP);
                     
+                    //TITULO POZOS
                     var estadoPozosAntes = $('#estadoPozos').text();
                     estadoPozosAntes = estadoPozosAntes.split(":")[0];
+                    if(!reg[code].equals(Nacional))
+                        {
+                            estadoPozosAntes = estadoPozosAntes+":"+reg[code]
+                        }
                     $('#estadoPozos').text(estadoPozosAntes);
+                    //TITULO PORCENTAJE EMERGENCIAS
+                    
+                    //TITULO LISTA EMERGENCIAS emergenciasPerc lista emergen
                 }
                 
     }), this.spinner = jvm.$("<div/>").addClass("jvectormap-spinner").appendTo(this.params.container), this.spinner.hide()
